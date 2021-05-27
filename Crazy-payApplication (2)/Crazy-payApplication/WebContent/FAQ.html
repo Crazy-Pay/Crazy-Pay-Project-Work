@@ -1,0 +1,354 @@
+<html>
+    <head>
+    <style>
+      
+      a.nav-link:hover{
+  background-color: #56baed;
+  
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: #00c6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00c6ff, #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
+}
+h1{
+  text-align: center;
+  font-size: 300px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: black;
+}
+h4{
+  font-size: 15px;
+}
+h6{
+  font-size: 7px;
+  text-align: center;
+}
+/* STRUCTURE */
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+/* TABS */
+h2.inactive {
+  color: #cccccc;
+}
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
+/* FORM TYPOGRAPHY*/
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
+}
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+input[type=text],input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  /* -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; */
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+input[type=text]:placeholder ,input[type=password]:placeholder{
+  color: #cccccc;
+}
+/* ANIMATIONS */
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+ 
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+  
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+.underlineHover:hover:after{
+  width: 100%;
+}
+/* OTHERS */
+*:focus {
+    outline: none;
+} 
+#icon {
+  width:100%;
+}
+* {
+  box-sizing: border-box;
+}
+nav-link:hover{
+background-color:#56baed ;
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+    <body  >
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <img src="photo/crazzy.png" width="150" height="75">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.jsp" style="font-size:large;color: black;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Features.html" style="font-size:large;color: black;">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Do's&dont.html" style="font-size:large;color: black;">Do's & Don't</a>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html" style="font-size:large;color: black;">FAQ</a>
+                      </li>
+                  </header>
+                 <center>
+                     <br><h1>Frequently Asked Question(FAQ)</h1><br/><br/>
+                 </center>
+                 <ul>
+                      <li> <b>What is Mobile Banking?</b>
+                                <br><b>Ans:-</b>Mobile Banking is a term used for accessing banking services over mobile device. These services may include general information about the banking services and specific information related to customer accounts. Customers may perform banking transactions through mobile device.</li>
+                           
+                           <br><li><b>What is Crazy-Pay Mobile App?  What are the benefits for users?</b>
+                                <br><b>Ans:-</b>Crazy-Pay Mobile App is Mobile Banking Application offered by Crazy-Pay Private Limited. Users can access most of the banking services anywhere any time through internet enabled handsets. It can be downloaded from app stores. Pre login options are accessible to all. Post login options can be accessed by customers of Crazy-Pay Private Limited after completing one time registration process.</li>
+                            
+                            <br><li><b>How to get Crazy-Pay Mobile application?</b>
+                                 <br><b>Ans:-</b>It is available for all leading mobile OS (Android, Apple iOS, Windows Mobile, Blackberry). Users may download Crazy-Pay Mobile from respective App store. Please check that you are downloading only official Crazy-Pay Mobile App and not any other app with resembling name or appearance.</li>
+                            
+                            <br><li><b>Which types of mobile handsets are supported by Cent Mobile? </b>
+                                <br><b>Ans:-</b>Crazy-Pay Mobile App runs on all mobile handsets running on Android, Apple iOS, BlackBerry, or Windows Phone/Mobile operating systems. Internet connectivity is required for running the app. For Internet connectivity Mobile Data service or Wi-FI hotspot may be used.</li>
+                            <br><li><b>Which is the latest version of Crazy-Pay Mobile? How to update the App? </b>
+                                <br><b>Ans:-</b>Crazy-Pay Mobile App is launched in Market. Users can check for latest version provided at app store. Setting the Auto Update option - On, may be convenient for getting regular updates.</li>
+                            <br><li><b>How to use Crazy-Pay Mobile app after installation? </b>
+                                <br><b>Ans:-</b>Anyone can use the app for getting general information (mentioned Pre Login options) after installation. However for accessing Accounts related services, users need to register it once. User trying to login is prompted for registration, if not already registered. </li> 
+                            <br><li><b>How to register for Cent Mobile? </b>
+                                <br><b>Ans:-</b>Launch the app and use option- New User Registration.  Go through the Terms & Conditions for Crazy-Pay Mobile app, you can proceed further after Accepting it.  Enter your CIF Number and Submit. After this, you will receive OTP (One Time Password) through SMS on your mobile number already registered with the bank. Enter User OTP and Submit. In case you don’t receive SMS for OTP, after short pause you may Re-Generate it. After successful validation of OTP, you can see Registration methods. There are four methods –</br>
+                                1. Using Debit Card Information</br>
+                                2. Using Internet Banking User ID & Password</br>
+                                3. Through ATM</br>
+                                4. Through Branch</br>
+                                If you are not having Debit Card or Internet Banking facility, please visit nearest Branch to request for OTP for Cent Mobile. Select method- 4 (Through Branch) for Registration and enter OTP. After successful validation, you can set your preferred User ID for Cent Mobile Login. Then you need to set MPIN (Login Password) and TPIN (Transaction password). After successful registration process, you may Login to see Home Screen with your account balance.
+                                 </li> 
+                            <br><li><b>How to Login to Crazy-Pay Mobile?</b>
+                                <br><b>Ans:-</b> After one time registration, you may login to Crazy-Pay Mobile. Enter your User ID and password (MPIN) then Submit. After successful validation, you see Home Screen with your account balance.</li> 
+                            <br><li><b>What is preferred User ID?</b>
+                                <br><b>Ans:-</b>Crazy-Pay Mobile App allows users to create user ID of their choice for login. It can be any alphanumeric combination of minimum 8 and maximum 20 characters.  Space or special characters can’t be used for User ID. It can be your name or any other text which is convenient to recall. </li> 
+                            <br><li><b>What is preferred User ID?</b>
+                                <br><b>Ans:-</b>Crazy-Pay Mobile App allows users to create user ID of their choice for login. It can be any alphanumeric combination of minimum 8 and maximum 20 characters.  Space or special characters can’t be used for User ID. It can be your name or any other text which is convenient to recall. </li> 
+                            <br><li><b>What is MPIN?</b>
+                                <br><b>Ans:-</b>MPIN is a four digit code. It is required for Login to Crazy-Pay. You are prompted to create MPIN of your choice during Registration process. Don’t disclose your MPIN to anyone. </li> 
+    
+                            <br><li><b>What is TPIN?</b>
+                                <br><b>Ans:-</b>TPIN is an alpha/numeric/alphanumeric code with 8 to 10 characters. It is required for authorizing transactions through Crazy-Pay Mobile. You are prompted to create TPIN of your choice during Registration process. Space or special characters can’t be used for TPIN. Don’t disclose your TPIN to anyone. </li> </br>
+
+                                    <h5>Customer Security</h5>
+
+                            <br><li><b>How secure is Crazy-Pay Mobile?</b>
+                                <br><b>Ans:-</b>Crazy-Pay Mobile is as secure as Central Bank of India’s Internet Banking and uses the latest security measures to give its customers the benefits of ease and convenience of banking anywhere, anytime. </li> 
+    
+    
+                            <br><li><b>Is any of my account information stored on my mobile phone?</b>
+                                <br><b>Ans:-</b>No information is stored on customer mobile phone or SIM card memory. So in case of a lost/stolen handset, no account information will be compromised. </li> 
+                                           
+                            <br><li><b>Are there any additional security measures that I should take?</b>
+                                <br><b>Ans:-</b>Do not reveal your Internet banking login ID, password and 16-digit ATM cum Debit Card number, your MPIN or your TPIN to anyone. Do not store any of these details on your mobile phone. </li> 
+        
+                            <br><li><b>My net connectivity failed in the middle of a transaction. How to check for the status of the transaction?</b>
+                                <br><b>Ans:-</b> In case net connectivity fails in the middle of a transaction then user should check the mini statement for transactions such as history for mobile recharge, bill Payments, funds transfer etc. </li> 
+                            <br><li><b>How to change MPIN?</b>
+                                <br><b>Ans:-</b>You may change it any number of times by using option- Change Login Password (MPIN) provided under menu Home > Request.   </li> 
+                                                    
+                            <br><li><b>How to change TPIN?</b>
+                                <br><b>Ans:-</b> You may change it any number of times by using option- Change Transaction Password (TPIN) provided under menu Home > Request. </li> 
+                            <br><li><b>How to change preferred User ID?</b>
+                                <br><b>Ans:-</b>You may change it by using option- Set your Preferred User ID provided under menu Home > Request.  </li> 
+                            <br><li><b>How to regenerate Login Password (MPIN) if you forget it?</b>
+                                <br><b>Ans:-</b> At Login screen, use option Forgot password. Enter CIF and Submit. As a security measure, OTP is sent to your registered mobile through SMS. Enter OTP and Submit. Create your new MPIN. Now you can login with this new MPIN.  </li> 
+                            <br><li><b>How to regenerate transaction password (TPIN) if you forget it?</b>
+                                <br><b>Ans:-</b> At Login screen, use option Login Help. Enter CIF and Submit. As a security measure, OTP is sent to your registered mobile through SMS. Enter OTP and Submit. Create your new TPIN. Now you can use this new TPIN for transactions.  </li> 
+                            <br><li><b>How to regenerate User ID if you forget it?</b>
+                                <br><b>Ans:-</b> At Login screen, use option Login Help. Enter CIF and Submit. As a security measure, OTP is sent to your registered mobile through SMS. Enter OTP and Submit. Create your new User ID. Now you can use this new User ID for login to Crazy-pay Mobile. </li> 
+                            <br><li><b>What are the terms & conditions for users of Crazy-Pay Mobile application?</b>
+                                <br><b>Ans:-</b> During one time Registration process, Terms & Conditions for Crazy-Pay Mobile are displayed to users with options – Accept/Decline. You may tap the link – ‘View Terms & Conditions’ at Login Screen anytime to view Terms & Conditions. </li> 
+                            <br><li><b>What is Missed Call service?</b>
+                                <br><b>Ans:-</b>Using this service, you can dial bank phone numbers for getting Account Balance or Last few Transactions through SMS. Crazy-Pay Mobile users can find this service at Login Screen> Missed Call Service.  </li> 
+                            <br><li><b>How to get latest notification/news updates from Bank?</b>
+                                <br><b>Ans:-</b> Notifications/news updates regarding Crazy-Pay Mobile and other products & services etc. can be viewed at Login Screen> What’s New. After login, user may also get new notifications under Alerts option at Home Screen </li> 
+                            <br><li><b>Where can I find answer to queries related to Crazy-Pay Mobile?</b>
+                                <br><b>Ans:-</b> Most of the queries related to Crazy-Pay Mobile are addressed at Login Screen> FAQ with keyword Search option. You can scroll down to see FAQ related to Crazy-Pay Mobile. You can write any keyword in Search Box to find related FAQ. For the queries not covered under FAQ, You may contact your nearest branch. </li> 
+                            <br><li><b>How to view available balances in various accounts?</b>
+                                <br><b>Ans:-</b>At Home Screen, your checking accounts (SB, CD and OD) are listed under Account Picker window. By scrolling up or down in this window, you can select any of your accounts to view balance in Available Balance column. For viewing last few transactions, you may swipe Account Balance column to left side.  For easy identification, Debit transactions are displayed in Red color. Swipe Account Balance column to Right side for returning to Home Screen.</li> 
+                            <br><li><b>How to set/change profile photo at Home Screen?</b>
+                                <br><b>Ans:-</b> At Home Screen, Tap circle provided for user defined photo and select any of your photos. Selected photo is displayed at Home screen. You may change it any time. </li> 
+                            <br><li><b>What is Last Login information?</b>
+                                <br><b>Ans:-</b> At Home Screen, user may check the Date and Time of last Login to Crazy-Pay Mobile.  </li> 
+                            <br><li><b>How to view details for Accounts?</b>
+                                <br><b>Ans:-</b>Accounts details for various types of accounts (Saving, Current, Overdraft,  Loan, PPF and Time Deposit including FDR, MMDC, RDS etc.) can be viewed under Home Screen>Accounts.  </li> 
+                            <br><li><b>How to view Mini Statement of Accounts?</b>
+                                <br><b>Ans:-</b>Mini Statement for various types of accounts can be viewed at Home Screen>Accounts> Account Type>Mini Statement.  </li>
+                            <br><li><b>How to transfer funds to accounts maintained with Central Bank of India?</b>
+                                <br><b>Ans:-</b>Use menu Home Screen>Transfer>My Accounts for own accounts. For other customer accounts, use menu Home Screen>Transfer>Other CBI Accounts. Select From Account, To Account and fill other details along with Transition Password.   </li>
+                            <br><li><b>How to transfer funds to accounts maintained with Other Banks?</b>
+                                <br><b>Ans:-</b> Crazy-Pay Mobile provides Fund Transfer to other Banks through NEFT or IMPS Service. IMPS service is available 24X7 for instant fund Transfer. NEFT transactions are settled at batch timings. For NEFT Fund transfer, use option Home Screen>Transfer>Other Bank Accounts. For Fund transfer through IMPS, use option Home Screen>Transfer>IMPS Services 24X7. Presently under IMPS, user may transfer funds through option Transfer to Account (IFSC).   </li>
+                            <br><li><b>What are the safety measures for using Crazy-Pay Mobile?</b>
+                                <br><b>Ans:-</b> As a safety measure, user should not keep User ID/Passwords (MPIN, TPIN) and CIF with the device. After login with correct MPIN, user is asked for transaction password (TPIN) also for completing fund transfers.  For high value fund transfers (presently for transaction amount more than Rs. 5000), OTP is also required for transaction authorization. Users are requested to always Logout from Crazy-Pay Mobile after use. It may auto log out, after 5 minutes idle time with popup message. User may continue to login by selecting pop up option ‘Keep me Logged-in’.   </li>
+                            <br><li><b>How to get Account Statement over Email?</b>
+                                <br><b>Ans:-</b>User may register request for getting Account Statement through Email. Request made by user is updated with Core Banking System (CBS) and mail is sent as per frequency selected by user.  </li>
+                            <br><li><b>How to apply for New Saving Account/Loan/Credit Card?</b>
+                                <br><b>Ans:-</b>User may submit requirement of new Saving Account, Loan or Credit Card by using option Home Screen>Request>Apply for New Account. Customer Care team would respond through mail/phone for required formalities.   </li>
+                            <br><li><b>Is there any limit for fund transfers through Crazy-Pay Mobile?</b>
+                                <br><b>Ans:-</b>Presently following limits have been fixed for transactions through Crazy-Pay Mobile.</br>
+                                Per transaction Limit= Rs. 50000</br>
+                                Per day Limit = Rs. 100000</br>
+                                Per month Limit = Rs. 500000</br>
+                                No. of transactions allowed per day = 10</li>
+                            <br><li><b>How to link Aadhar No. to Account?</b>
+                                <br><b>Ans:-</b>Use option Home Screen>VAS>Link Aadhar No. to Account for linking Aadhar number to your Account.   </li>
+                            <br><li><b>How to request for blocking ATM (Debit) Card?</b>
+                                <br><b>Ans:-</b>Use option Home Screen>Cards>Block Debit Card to request for blocking your Debit Card, in case of need. Select you Debit Card Number to be blocked. Your request will be forwarded for processing.  </li>
+                            <br><li><b>How to request for blocking Credit Card?</b>
+                                <br><b>Ans:-</b>Use option Home Screen>Cards>Block Credit Card to request for blocking your Credit Card, in case of need. Select you Credit Card Number to be blocked and Select Reason. Your request will be forwarded for processing.  </li>
+                            <br><li><b>How to submit feedback/issues related to Crazy-Pay Mobile?</b>
+                                <br><b>Ans:-</b> We welcomes the feedback from Crazy-Pay Mobile users. User may provide their feedback through option Home Screen>Request>Submit Feedback. Bank is committed to provide user friendly and secure Mobile Banking services. Feedback may be related to any issue/problem observed by user or some suggestion or updation of information provided at Crazy-Pay Mobile. </li>
+
+                        </ul><br/><br/>
+          <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    </body>
+</html>
